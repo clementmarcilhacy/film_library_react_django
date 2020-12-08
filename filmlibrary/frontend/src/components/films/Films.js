@@ -1,17 +1,17 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getLeads, deleteLead } from '../../actions/films';
+import { getFilms, deleteFilm } from '../../actions/films';
 
 export class Films extends Component {
   static propTypes = {
     films: PropTypes.array.isRequired,
-    getLeads: PropTypes.func.isRequired,
-    deleteLead: PropTypes.func.isRequired,
+    getFilms: PropTypes.func.isRequired,
+    deleteFilm: PropTypes.func.isRequired,
   };
 
   componentDidMount() {
-    this.props.getLeads();
+    this.props.getFilms();
   }
 
   render() {
@@ -37,7 +37,7 @@ export class Films extends Component {
                 <td>{film.message}</td>
                 <td>
                   <button
-                    onClick={this.props.deleteLead.bind(this, film.id)}
+                    onClick={this.props.deleteFilm.bind(this, film.id)}
                     className="btn btn-danger btn-sm"
                   >
                     {' '}
@@ -57,4 +57,4 @@ const mapStateToProps = (state) => ({
   films: state.films.films,
 });
 
-export default connect(mapStateToProps, { getLeads, deleteLead })(Films);
+export default connect(mapStateToProps, { getFilms, deleteFilm })(Films);

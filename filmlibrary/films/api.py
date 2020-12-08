@@ -1,15 +1,15 @@
 from films.models import Film
 from rest_framework import viewsets, permissions
-from .serializers import LeadSerializer
+from .serializers import FilmSerializer
 
 # Film Viewset
 
 
-class LeadViewSet(viewsets.ModelViewSet):
+class FilmViewSet(viewsets.ModelViewSet):
     permission_classes = [
         permissions.IsAuthenticated,
     ]
-    serializer_class = LeadSerializer
+    serializer_class = FilmSerializer
 
     def get_queryset(self):
         return self.request.user.films.all()
