@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
-import { Link, Redirect } from 'react-router-dom';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import { register } from '../../actions/auth';
-import { createMessage } from '../../actions/messages';
+import React, { Component } from "react";
+import { Link, Redirect } from "react-router-dom";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { register } from "../../actions/auth";
+import { createMessage } from "../../actions/messages";
 
 export class Register extends Component {
   state = {
-    username: '',
-    email: '',
-    password: '',
-    password2: '',
+    username: "",
+    email: "",
+    password: "",
+    password2: "",
   };
 
   static propTypes = {
@@ -22,7 +22,7 @@ export class Register extends Component {
     e.preventDefault();
     const { username, email, password, password2 } = this.state;
     if (password !== password2) {
-      this.props.createMessage({ passwordNotMatch: 'Passwords do not match' });
+      this.props.createMessage({ passwordNotMatch: "Passwords do not match" });
     } else {
       const newUser = {
         username,

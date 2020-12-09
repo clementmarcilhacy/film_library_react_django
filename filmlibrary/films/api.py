@@ -3,8 +3,6 @@ from rest_framework import viewsets, permissions
 from .serializers import FilmSerializer
 
 # Film Viewset
-
-
 class FilmViewSet(viewsets.ModelViewSet):
     permission_classes = [
         permissions.IsAuthenticated,

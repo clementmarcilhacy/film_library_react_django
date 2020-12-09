@@ -1,4 +1,4 @@
-import { GET_FILMS, DELETE_FILM, ADD_FILM, CLEAR_FILMS } from '../actions/types.js';
+import { GET_FILMS, DELETE_FILM, ADD_FILM, CLEAR_FILMS } from "../actions/types.js";
 
 const initialState = {
   films: [],

@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import { addFilm } from '../../actions/films';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { addFilm } from "../../actions/films";
 
 export class Form extends Component {
   state = {
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   };
 
   static propTypes = {
@@ -22,9 +22,9 @@ export class Form extends Component {
     const film = { name, email, message };
     this.props.addFilm(film);
     this.setState({
-      name: '',
-      email: '',
-      message: '',
+      name: "",
+      email: "",
+      message: "",
     });
   };
 

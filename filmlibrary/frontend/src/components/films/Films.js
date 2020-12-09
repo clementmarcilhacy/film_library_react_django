@@ -1,7 +1,7 @@
-import React, { Component, Fragment } from 'react';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import { getFilms, deleteFilm } from '../../actions/films';
+import React, { Component, Fragment } from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { getFilms, deleteFilm } from "../../actions/films";
 
 export class Films extends Component {
   static propTypes = {
@@ -40,7 +40,7 @@ export class Films extends Component {
                     onClick={this.props.deleteFilm.bind(this, film.id)}
                     className="btn btn-danger btn-sm"
                   >
-                    {' '}
+                    {" "}
                     Delete
                   </button>
                 </td>
