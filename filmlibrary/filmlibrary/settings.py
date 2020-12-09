@@ -85,12 +85,18 @@ WSGI_APPLICATION = 'filmlibrary.wsgi.application'
 
 DATABASES = {
     'default': {
+        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        # 'NAME': 'biblihoteque',
+        # 'USER': 'biblihotequeuser',
+        # 'PASSWORD': 'gddxotz',
+        # 'HOST': 'localhost',
+        # 'PORT': '',
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'biblihoteque',
-        'USER': 'biblihotequeuser',
-        'PASSWORD': 'gddxotz',
-        'HOST': 'localhost',
-        'PORT': '',
+        'NAME': 'dcue6fsi5pelu0',
+        'USER': 'zsvkgrsxmptwpd',
+        'PASSWORD': '81993521bdc14270605851527acd4b9dd2c5242409c29eef10e1fefc57a29fe7',
+        'HOST': 'ec2-52-201-184-16.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
