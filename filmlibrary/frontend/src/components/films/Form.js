@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { addLead } from '../../actions/films';
+import { addFilm } from '../../actions/films';
 
 export class Form extends Component {
   state = {
@@ -11,7 +11,7 @@ export class Form extends Component {
   };
 
   static propTypes = {
-    addLead: PropTypes.func.isRequired,
+    addFilm: PropTypes.func.isRequired,
   };
 
   onChange = (e) => this.setState({ [e.target.name]: e.target.value });
@@ -20,7 +20,7 @@ export class Form extends Component {
     e.preventDefault();
     const { name, email, message } = this.state;
     const film = { name, email, message };
-    this.props.addLead(film);
+    this.props.addFilm(film);
     this.setState({
       name: '',
       email: '',
@@ -75,4 +75,4 @@ export class Form extends Component {
   }
 }
 
-export default connect(null, { addLead })(Form);
+export default connect(null, { addFilm })(Form);

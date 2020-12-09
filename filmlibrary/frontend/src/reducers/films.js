@@ -1,4 +1,4 @@
-import { GET_LEADS, DELETE_LEAD, ADD_LEAD, CLEAR_LEADS } from '../actions/types.js';
+import { GET_FILMS, DELETE_FILM, ADD_FILM, CLEAR_FILMS } from '../actions/types.js';
 
 const initialState = {
   films: [],
@@ -6,22 +6,22 @@ const initialState = {
 
 export default function (state = initialState, action) {
   switch (action.type) {
-    case GET_LEADS:
+    case GET_FILMS:
       return {
         ...state,
         films: action.payload,
       };
-    case DELETE_LEAD:
+    case DELETE_FILM:
       return {
         ...state,
         films: state.films.filter((film) => film.id !== action.payload),
       };
-    case ADD_LEAD:
+    case ADD_FILM:
       return {
         ...state,
         films: [...state.films, action.payload],
       };
-    case CLEAR_LEADS:
+    case CLEAR_FILMS:
       return {
         ...state,
         films: [],

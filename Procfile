@@ -1,0 +1,1 @@
+web: gunicorn --chdir /app/filmlibrary filmlibrary.wsgi

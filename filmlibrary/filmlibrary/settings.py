@@ -25,7 +25,7 @@ SECRET_KEY = 't7g$gddxotz%5_gwrt64xf#-bjwr(bk_#10!ur9et_s-*vhqti'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['infinite-hamlet-52126.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -50,6 +50,7 @@ REST_FRAMEWORK = {
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -84,12 +85,18 @@ WSGI_APPLICATION = 'filmlibrary.wsgi.application'
 
 DATABASES = {
     'default': {
+        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        # 'NAME': 'biblihoteque',
+        # 'USER': 'biblihotequeuser',
+        # 'PASSWORD': 'gddxotz',
+        # 'HOST': 'localhost',
+        # 'PORT': '',
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'biblihoteque',
-        'USER': 'biblihotequeuser',
-        'PASSWORD': 'gddxotz',
-        'HOST': 'localhost',
-        'PORT': '',
+        'NAME': 'dcue6fsi5pelu0',
+        'USER': 'zsvkgrsxmptwpd',
+        'PASSWORD': '81993521bdc14270605851527acd4b9dd2c5242409c29eef10e1fefc57a29fe7',
+        'HOST': 'ec2-52-201-184-16.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
@@ -130,3 +137,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
