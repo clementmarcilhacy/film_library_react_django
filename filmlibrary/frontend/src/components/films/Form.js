@@ -1,35 +1,35 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
-import { addFilm } from "../../actions/films";
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
+import { addFilm } from '../../actions/films'
 
 export class Form extends Component {
   state = {
-    name: "",
-    email: "",
-    message: "",
-  };
+    name: '',
+    email: '',
+    message: '',
+  }
 
   static propTypes = {
     addFilm: PropTypes.func.isRequired,
-  };
+  }
 
-  onChange = (e) => this.setState({ [e.target.name]: e.target.value });
+  onChange = (e) => this.setState({ [e.target.name]: e.target.value })
 
   onSubmit = (e) => {
-    e.preventDefault();
-    const { name, email, message } = this.state;
-    const film = { name, email, message };
-    this.props.addFilm(film);
+    e.preventDefault()
+    const { name, email, message } = this.state
+    const film = { name, email, message }
+    this.props.addFilm(film)
     this.setState({
-      name: "",
-      email: "",
-      message: "",
-    });
-  };
+      name: '',
+      email: '',
+      message: '',
+    })
+  }
 
   render() {
-    const { name, email, message } = this.state;
+    const { name, email, message } = this.state
     return (
       <div className="card card-body mt-4 mb-4">
         <h2>Add Film</h2>
@@ -71,8 +71,8 @@ export class Form extends Component {
           </div>
         </form>
       </div>
-    );
+    )
   }
 }
 
-export default connect(null, { addFilm })(Form);
+export default connect(null, { addFilm })(Form)

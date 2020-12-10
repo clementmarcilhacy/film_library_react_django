@@ -1,17 +1,17 @@
-import React, { Component, Fragment } from "react";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
-import { getFilms, deleteFilm } from "../../actions/films";
+import React, { Component, Fragment } from 'react'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
+import { getFilms, deleteFilm } from '../../actions/films'
 
 export class Films extends Component {
   static propTypes = {
     films: PropTypes.array.isRequired,
     getFilms: PropTypes.func.isRequired,
     deleteFilm: PropTypes.func.isRequired,
-  };
+  }
 
   componentDidMount() {
-    this.props.getFilms();
+    this.props.getFilms()
   }
 
   render() {
@@ -40,7 +40,7 @@ export class Films extends Component {
                     onClick={this.props.deleteFilm.bind(this, film.id)}
                     className="btn btn-danger btn-sm"
                   >
-                    {" "}
+                    {' '}
                     Delete
                   </button>
                 </td>
@@ -49,12 +49,12 @@ export class Films extends Component {
           </tbody>
         </table>
       </Fragment>
-    );
+    )
   }
 }
 
 const mapStateToProps = (state) => ({
   films: state.films.films,
-});
+})
 
-export default connect(mapStateToProps, { getFilms, deleteFilm })(Films);
+export default connect(mapStateToProps, { getFilms, deleteFilm })(Films)
