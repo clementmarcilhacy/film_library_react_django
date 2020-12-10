@@ -1,3 +1,6 @@
+#Environment variables
+filmlibrary/filmlibrary/.env
+
 ### Pipenv
 Pipfile
 Pipfile.lock
