@@ -1,6 +1,6 @@
-import React, { Fragment } from "react";
-import Form from "./Form";
-import Films from "./Films";
+import React, { Fragment } from 'react'
+import Form from './Form'
+import Films from './Films'
 
 export default function Dashboard() {
   return (
@@ -8,5 +8,5 @@ export default function Dashboard() {
       <Form />
       <Films />
     </Fragment>
-  );
+  )
 }
