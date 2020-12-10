@@ -19,7 +19,7 @@ import { loadUser } from '../actions/auth'
 // Alert Options
 const alertOptions = {
   timeout: 3000,
-  position: 'top center',
+  position: 'top center'
 }
 
 class App extends Component {
