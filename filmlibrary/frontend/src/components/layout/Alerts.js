@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 export class Alerts extends Component {
   static propTypes = {
     error: PropTypes.object.isRequired,
-    message: PropTypes.object.isRequired,
+    message: PropTypes.object.isRequired
   }
 
   componentDidUpdate(prevProps) {
@@ -33,7 +33,7 @@ export class Alerts extends Component {
 
 const mapStateToProps = (state) => ({
   error: state.errors,
-  message: state.messages,
+  message: state.messages
 })
 
 export default connect(mapStateToProps)(withAlert()(Alerts))

@@ -8,5 +8,5 @@ export default combineReducers({
   films,
   errors,
   messages,
-  auth,
+  auth
 })

@@ -7,7 +7,7 @@ import { logout } from '../../actions/auth'
 export class Header extends Component {
   static propTypes = {
     auth: PropTypes.object.isRequired,
-    logout: PropTypes.func.isRequired,
+    logout: PropTypes.func.isRequired
   }
 
   render() {
@@ -68,7 +68,7 @@ export class Header extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  auth: state.auth,
+  auth: state.auth
 })
 
 export default connect(mapStateToProps, { logout })(Header)

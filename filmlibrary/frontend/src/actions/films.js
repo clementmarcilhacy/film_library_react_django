@@ -11,7 +11,7 @@ export const getFilms = () => (dispatch, getState) => {
     .then((res) => {
       dispatch({
         type: GET_FILMS,
-        payload: res.data,
+        payload: res.data
       })
     })
     .catch((err) => dispatch(returnErrors(err.response.data, err.response.status)))
@@ -25,7 +25,7 @@ export const deleteFilm = (id) => (dispatch, getState) => {
       dispatch(createMessage({ deleteFilm: 'Film Deleted' }))
       dispatch({
         type: DELETE_FILM,
-        payload: id,
+        payload: id
       })
     })
     .catch((err) => console.log(err))
@@ -39,7 +39,7 @@ export const addFilm = (film) => (dispatch, getState) => {
       dispatch(createMessage({ addFilm: 'Film Added' }))
       dispatch({
         type: ADD_FILM,
-        payload: res.data,
+        payload: res.data
       })
     })
     .catch((err) => dispatch(returnErrors(err.response.data, err.response.status)))

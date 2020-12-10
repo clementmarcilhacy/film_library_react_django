@@ -7,12 +7,12 @@ import { login } from '../../actions/auth'
 export class Login extends Component {
   state = {
     username: '',
-    password: '',
+    password: ''
   }
 
   static propTypes = {
     login: PropTypes.func.isRequired,
-    isAuthenticated: PropTypes.bool,
+    isAuthenticated: PropTypes.bool
   }
 
   onSubmit = (e) => {
@@ -70,7 +70,7 @@ export class Login extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  isAuthenticated: state.auth.isAuthenticated,
+  isAuthenticated: state.auth.isAuthenticated
 })
 
 export default connect(mapStateToProps, { login })(Login)

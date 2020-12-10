@@ -7,7 +7,7 @@ export class Films extends Component {
   static propTypes = {
     films: PropTypes.array.isRequired,
     getFilms: PropTypes.func.isRequired,
-    deleteFilm: PropTypes.func.isRequired,
+    deleteFilm: PropTypes.func.isRequired
   }
 
   componentDidMount() {
@@ -54,7 +54,7 @@ export class Films extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  films: state.films.films,
+  films: state.films.films
 })
 
 export default connect(mapStateToProps, { getFilms, deleteFilm })(Films)

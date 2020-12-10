@@ -7,11 +7,11 @@ export class Form extends Component {
   state = {
     name: '',
     email: '',
-    message: '',
+    message: ''
   }
 
   static propTypes = {
-    addFilm: PropTypes.func.isRequired,
+    addFilm: PropTypes.func.isRequired
   }
 
   onChange = (e) => this.setState({ [e.target.name]: e.target.value })
@@ -24,7 +24,7 @@ export class Form extends Component {
     this.setState({
       name: '',
       email: '',
-      message: '',
+      message: ''
     })
   }
 

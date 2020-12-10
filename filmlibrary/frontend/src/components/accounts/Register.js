@@ -10,12 +10,12 @@ export class Register extends Component {
     username: '',
     email: '',
     password: '',
-    password2: '',
+    password2: ''
   }
 
   static propTypes = {
     register: PropTypes.func.isRequired,
-    isAuthenticated: PropTypes.bool,
+    isAuthenticated: PropTypes.bool
   }
 
   onSubmit = (e) => {
@@ -27,7 +27,7 @@ export class Register extends Component {
       const newUser = {
         username,
         password,
-        email,
+        email
       }
       this.props.register(newUser)
     }
@@ -101,7 +101,7 @@ export class Register extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  isAuthenticated: state.auth.isAuthenticated,
+  isAuthenticated: state.auth.isAuthenticated
 })
 
 export default connect(mapStateToProps, { register, createMessage })(Register)

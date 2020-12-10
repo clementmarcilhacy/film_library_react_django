@@ -9,7 +9,7 @@ import {
   LOGIN_FAIL,
   LOGOUT_SUCCESS,
   REGISTER_SUCCESS,
-  REGISTER_FAIL,
+  REGISTER_FAIL
 } from './types'
 
 // CHECK TOKEN & LOAD USER
@@ -22,13 +22,13 @@ export const loadUser = () => (dispatch, getState) => {
     .then((res) => {
       dispatch({
         type: USER_LOADED,
-        payload: res.data,
+        payload: res.data
       })
     })
     .catch((err) => {
       dispatch(returnErrors(err.response.data, err.response.status))
       dispatch({
-        type: AUTH_ERROR,
+        type: AUTH_ERROR
       })
     })
 }
@@ -38,8 +38,8 @@ export const login = (username, password) => (dispatch) => {
   // Headers
   const config = {
     headers: {
-      'Content-Type': 'application/json',
-    },
+      'Content-Type': 'application/json'
+    }
   }
 
   // Request Body
@@ -50,13 +50,13 @@ export const login = (username, password) => (dispatch) => {
     .then((res) => {
       dispatch({
         type: LOGIN_SUCCESS,
-        payload: res.data,
+        payload: res.data
       })
     })
     .catch((err) => {
       dispatch(returnErrors(err.response.data, err.response.status))
       dispatch({
-        type: LOGIN_FAIL,
+        type: LOGIN_FAIL
       })
     })
 }
@@ -66,8 +66,8 @@ export const register = ({ username, password, email }) => (dispatch) => {
   // Headers
   const config = {
     headers: {
-      'Content-Type': 'application/json',
-    },
+      'Content-Type': 'application/json'
+    }
   }
 
   // Request Body
@@ -78,13 +78,13 @@ export const register = ({ username, password, email }) => (dispatch) => {
     .then((res) => {
       dispatch({
         type: REGISTER_SUCCESS,
-        payload: res.data,
+        payload: res.data
       })
     })
     .catch((err) => {
       dispatch(returnErrors(err.response.data, err.response.status))
       dispatch({
-        type: REGISTER_FAIL,
+        type: REGISTER_FAIL
       })
     })
 }
@@ -96,7 +96,7 @@ export const logout = () => (dispatch, getState) => {
     .then((res) => {
       dispatch({ type: 'CLEAR_FILMS' })
       dispatch({
-        type: LOGOUT_SUCCESS,
+        type: LOGOUT_SUCCESS
       })
     })
     .catch((err) => {
@@ -112,8 +112,8 @@ export const tokenConfig = (getState) => {
   // Headers
   const config = {
     headers: {
-      'Content-Type': 'application/json',
-    },
+      'Content-Type': 'application/json'
+    }
   }
 
   // If token, add to headers config
