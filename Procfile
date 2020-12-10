@@ -1,1 +1,1 @@
-web: gunicorn --chdir /app/filmlibrary filmlibrary.wsgi
+web: gunicorn --chdir /app/filmlibrary filmlibrary.wsgi --preload --log-file -

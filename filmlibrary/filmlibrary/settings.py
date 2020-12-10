@@ -34,7 +34,7 @@ SECRET_KEY = 't7g$gddxotz%5_gwrt64xf#-bjwr(bk_#10!ur9et_s-*vhqti'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['infinite-hamlet-52126.herokuapp.com', '127.0.0.1']
+# ALLOWED_HOSTS = ['infinite-hamlet-52126.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -141,3 +141,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Configure Django App for Heroku.
+import django_on_heroku
+django_on_heroku.settings(locals())
