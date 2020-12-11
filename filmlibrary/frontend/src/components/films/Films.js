@@ -24,7 +24,7 @@ export class Films extends Component {
               <th>ID</th>
               <th>Name</th>
               <th>Email</th>
-              <th>Message</th>
+              <th>Message changed</th>
               <th />
             </tr>
           </thead>
