@@ -22,7 +22,7 @@ jobs:
         uses: github/super-linter@v3
         env:
           DEFAULT_BRANCH: main
-          FILTER_REGEX_INCLUDE: .*src/.*
+          #FILTER_REGEX_INCLUDE: .*src/.*
           #FILTER_REGEX_EXCLUDE: .*src/components/.*
-          FILTER_REGEX_EXCLUDE: .*src/components/.* .*src/index.js
+          FILTER_REGEX_INCLUDE: .*src/actions/.* .*src/reducers/.*
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
