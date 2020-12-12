@@ -18,7 +18,6 @@ export class Films extends Component {
     return (
       <Fragment>
         <h2>Films</h2>
-        <p>Test CI/CD</p>
         <table className="table table-striped">
           <thead>
             <tr>
