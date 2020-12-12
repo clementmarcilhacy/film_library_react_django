@@ -18,13 +18,14 @@ export class Films extends Component {
     return (
       <Fragment>
         <h2>Films</h2>
+        <p>Test CI/CD</p>
         <table className="table table-striped">
           <thead>
             <tr>
               <th>ID</th>
               <th>Name</th>
               <th>Email</th>
-              <th>Message changed</th>
+              <th>Message</th>
               <th />
             </tr>
           </thead>

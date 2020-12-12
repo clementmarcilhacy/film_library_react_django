@@ -34,8 +34,7 @@ SECRET_KEY = 't7g$gddxotz%5_gwrt64xf#-bjwr(bk_#10!ur9et_s-*vhqti'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ['infinite-hamlet-52126.herokuapp.com', '127.0.0.1']
-
+ALLOWED_HOSTS = ['infinite-hamlet-52126.herokuapp.com', '127.0.0.1']
 
 # Application definition
 
@@ -88,20 +87,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'filmlibrary.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': env('DB_NAME'),
-#         'USER': env('DB_USER'),
-#         'PASSWORD': env('DB_PASSWORD'),
-#         'HOST': env('DB_HOST'),
-#         'PORT': env('DB_PORT'),
-#     }
-# }
 
 DATABASES = {
     'default': env.db()
