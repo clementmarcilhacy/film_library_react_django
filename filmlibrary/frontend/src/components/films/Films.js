@@ -23,7 +23,7 @@ export class Films extends Component {
             <tr>
               <th>ID</th>
               <th>Name</th>
-              <th>Email</th>
+              <th>Year</th>
               <th>Message</th>
               <th />
             </tr>
@@ -33,7 +33,7 @@ export class Films extends Component {
               <tr key={film.id}>
                 <td>{film.id}</td>
                 <td>{film.name}</td>
-                <td>{film.email}</td>
+                <td>{film.year}</td>
                 <td>{film.message}</td>
                 <td>
                   <button
