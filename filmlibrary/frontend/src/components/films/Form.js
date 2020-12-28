@@ -6,7 +6,7 @@ import { addFilm } from '../../actions/films'
 export class Form extends Component {
   state = {
     name: '',
-    email: '',
+    year: '',
     message: ''
   }
 
@@ -18,18 +18,18 @@ export class Form extends Component {
 
   onSubmit = (e) => {
     e.preventDefault()
-    const { name, email, message } = this.state
-    const film = { name, email, message }
+    const { name, year, message } = this.state
+    const film = { name, year, message }
     this.props.addFilm(film)
     this.setState({
       name: '',
-      email: '',
+      year: '',
       message: ''
     })
   }
 
   render() {
-    const { name, email, message } = this.state
+    const { name, year, message } = this.state
     return (
       <div className="card card-body mt-4 mb-4">
         <h2>Add Film</h2>
@@ -45,13 +45,13 @@ export class Form extends Component {
             />
           </div>
           <div className="form-group">
-            <label>Email</label>
+            <label>Year</label>
             <input
               className="form-control"
-              type="email"
-              name="email"
+              type="number"
+              name="year"
               onChange={this.onChange}
-              value={email}
+              value={year}
             />
           </div>
           <div className="form-group">
